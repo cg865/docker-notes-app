@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip wheel --no-cache-dir --wheel-dir /wheels -r requirements.txt
 
-FORM python:3.9-alpine
+FROM python:3.9-alpine
 
 ENV NOTES_FILE=/data/notes.json
 ENV APP_NAME="Docker Notes App"
